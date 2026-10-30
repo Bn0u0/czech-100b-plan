@@ -19,26 +19,44 @@
 
   const toggle = qs('#menu-toggle');
   const menu = qs('#mobile-menu');
-  toggle.addEventListener('click', () => {
-    const expanded = toggle.getAttribute('aria-expanded') === 'true';
-    toggle.setAttribute('aria-expanded',String(!expanded));
-    menu.hidden = expanded;
+  function setMenu(open) {
+    menu.hidden = !open;
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? '關閉導覽選單' : '開啟導覽選單');
+  }
+  toggle.addEventListener('click', () => setMenu(menu.hidden));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !menu.hidden) {setMenu(false); toggle.focus();}
   });
-  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {menu.hidden=true;toggle.setAttribute('aria-expanded','false');}));
+  document.addEventListener('click', (event) => {
+    if (!menu.hidden && !menu.contains(event.target) && !toggle.contains(event.target)) setMenu(false);
+  });
+  window.addEventListener('resize', () => {if (window.innerWidth > 850) setMenu(false);}, {passive:true});
 
   const buttons = qsa('[data-year]');
   function showEra(year) {
     const era = eras[year];
     if (!era) return;
     buttons.forEach(b=>{const active=b.dataset.year===year;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
-    qs('#era-year').innerHTML = `${year}<span>.</span>`;
+    qs('#era-year').replaceChildren(document.createTextNode(year), Object.assign(document.createElement('span'), {textContent: '.'}));
     qs('#era-caption').textContent = era.caption;
     qs('#era-title').textContent = era.title;
     qs('#era-description').textContent = era.body;
     qs('#era-source').href = era.url;
     qs('#timeline-indicator').style.left = `${(buttons.findIndex(b=>b.dataset.year===year)/(buttons.length-1))*100}%`;
   }
-  buttons.forEach(b=>b.addEventListener('click',()=>showEra(b.dataset.year)));
+  buttons.forEach((button, index) => {
+    button.addEventListener('click', () => showEra(button.dataset.year));
+    button.addEventListener('keydown', (event) => {
+      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+      const next = event.key === 'Home' ? 0 : event.key === 'End' ? buttons.length - 1
+        : (index + (event.key === 'ArrowRight' ? 1 : -1) + buttons.length) % buttons.length;
+      buttons[next].focus();
+      showEra(buttons[next].dataset.year);
+    });
+  });
   showEra('1918');
 
   // Upstream template pattern: chapter config -> generated #features .step -> scroll-driven map flyTo.
