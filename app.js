@@ -73,7 +73,7 @@
     const title = document.createElement('h3');title.textContent=chapter.title;
     const description=document.createElement('p');description.className='chapter-description';description.textContent=chapter.description;
     const focus=document.createElement('div');focus.className='chapter-focus';focus.textContent=chapter.focus;
-    const link=document.createElement('a');link.className='chapter-link';link.href=chapter.link;link.target='_blank';link.rel='noopener noreferrer';link.textContent='閱讀相關機構或史料 ↗';
+    const link=document.createElement('a');link.className='chapter-link';link.href=chapter.link;link.target='_blank';link.rel='noopener noreferrer';link.textContent='閱讀相關機構或史料';
     panel.append(topline,date,title,description,focus,link);section.appendChild(panel);featureContainer.appendChild(section);
   });
 
