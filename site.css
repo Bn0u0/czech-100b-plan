@@ -60,3 +60,11 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offs
   .year-button{transition:none}
   .timeline-rule>div{transition:none}
 }
+
+/* Emoji-free editorial details: typography and geometry, no pictographs. */
+.brand-mark{display:inline-block;width:2px;height:29px;background:var(--accent);flex:0 0 2px;font-size:0}
+.pill-btn{justify-content:center;gap:0}
+.map-legend .legend-dot{display:inline-block;width:7px;height:7px;border:1px solid var(--accent);border-radius:50%;vertical-align:middle;margin-right:9px}
+.manifesto-grid>div:first-child{padding-top:5px}
+.footer h2{margin-top:0}
+@media(max-width:600px){.brand-mark{height:25px}.map-legend .legend-dot{margin-right:6px}}
