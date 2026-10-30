@@ -1,6 +1,6 @@
 # 捷克百億計劃 · 文字與自由
 
-[**開啟網站 V1 ↗**](https://czech-100b-plan.vercel.app/) ｜ [官方計畫摘要](docs/official-itinerary.md)
+[**開啟網站 V1**](https://czech-100b-plan.vercel.app/) ｜ [官方計畫摘要](docs/official-itinerary.md)
 
 這是配合青年百億海外圓夢基金計畫 **M-4-12《捷克文學與民主韌性》** 所製作的獨立數位策展／作品集原型。主題包括捷克文學、布拉格城市歷史、民主記憶與中歐文化交流。
 
