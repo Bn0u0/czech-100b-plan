@@ -2,8 +2,9 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#141a1b" />
+  <meta name="color-scheme" content="dark light" />
   <meta name="description" content="走進捷克的文學、城市與民主記憶。青年百億 M-4-12 捷克文學與民主韌性數位策展原型。" />
   <meta property="og:title" content="文字與自由｜Czech Literature & Freedom" />
   <meta property="og:description" content="以時間、地圖與文學走讀捷克的民主記憶。" />
@@ -27,7 +28,7 @@
       <a href="#manifesto">策展概念</a><a href="#timeline">歷史時間軸</a><a href="#atlas">文學地圖</a><a href="#fieldwork">學習計畫</a>
     </nav>
     <a class="nav-action" href="https://github.com/Bn0u0/czech-100b-plan" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-    <button class="mobile-trigger" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="開啟選單"><span></span><span></span></button>
+    <button class="mobile-trigger" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="開啟導覽選單"><span></span><span></span></button>
     <nav id="mobile-menu" class="mobile-menu" aria-label="手機選單" hidden><a href="#manifesto">策展概念</a><a href="#timeline">歷史時間軸</a><a href="#atlas">文學地圖</a><a href="#fieldwork">學習計畫</a></nav>
   </header>
   <main id="main">
@@ -36,7 +37,7 @@
       <div class="hero-shade"></div>
       <div class="hero-grain" aria-hidden="true"></div>
       <div class="hero-inner">
-        <div class="eyebrow"><span class="eyebrow-rule"></span> CZECH CULTURAL ATLAS <span class="eyebrow-index">01 — 03</span></div>
+        
         <p class="hero-kicker">一座城市 · 一段歷史 · 一種不願沉默的聲音</p>
         <h1 id="hero-title">在文字之間，<br><em>遇見自由。</em></h1>
         <p class="hero-copy">從布拉格的石板街，到作家筆下的時代記憶。讓文學成為認識捷克歷史、民主與文化韌性的另一種入口。</p>
@@ -58,12 +59,12 @@
     <section class="timeline-section section-pad" id="timeline" aria-labelledby="timeline-title">
       <div class="section-number"><span>02 / THROUGH THE YEARS</span><span>互動時間軸</span></div>
       <div class="section-heading-row"><h2 id="timeline-title">時間留下的<span class="serif-italic">回聲。</span></h2><p>選擇一個年份，閱讀它如何影響文學與社會。這些是研究入口，不是單一事件的完整歷史論述。</p></div>
-      <div class="timeline-card"><div class="timeline-overline">EXPLORE AN ERA <span>1918—1993</span></div><div class="timeline-years" role="group" aria-label="選擇歷史年份"><button type="button" class="year-button active" data-year="1918" aria-pressed="true">1918</button><button type="button" class="year-button" data-year="1968" aria-pressed="false">1968</button><button type="button" class="year-button" data-year="1989" aria-pressed="false">1989</button><button type="button" class="year-button" data-year="1993" aria-pressed="false">1993</button></div><div class="timeline-rule"><div id="timeline-indicator"></div></div><div class="timeline-detail" aria-live="polite"><div><div class="era-label" id="era-caption">THE BEGINNING</div><div class="era-year" id="era-year">1918<span>.</span></div></div><div class="era-right"><h3 id="era-title">捷克斯洛伐克成立</h3><p id="era-description">第一次世界大戰結束後，捷克斯洛伐克建國。理解這個起點，有助於閱讀後來關於民族、語言與國家認同的文學討論。</p><a id="era-source" href="https://www.britannica.com/place/Czechoslovakia" target="_blank" rel="noopener noreferrer">閱讀資料來源 ↗</a></div></div></div>
+      <div class="timeline-card"><div class="timeline-overline">EXPLORE AN ERA <span>1918—1993</span></div><div class="timeline-years" role="group" aria-label="選擇歷史年份；可用左右方向鍵切換"><button type="button" class="year-button active" data-year="1918" aria-pressed="true">1918</button><button type="button" class="year-button" data-year="1968" aria-pressed="false">1968</button><button type="button" class="year-button" data-year="1989" aria-pressed="false">1989</button><button type="button" class="year-button" data-year="1993" aria-pressed="false">1993</button></div><div class="timeline-rule"><div id="timeline-indicator"></div></div><div class="timeline-detail" aria-live="polite"><div><div class="era-label" id="era-caption">THE BEGINNING</div><div class="era-year" id="era-year">1918<span>.</span></div></div><div class="era-right"><h3 id="era-title">捷克斯洛伐克成立</h3><p id="era-description">第一次世界大戰結束後，捷克斯洛伐克建國。理解這個起點，有助於閱讀後來關於民族、語言與國家認同的文學討論。</p><a id="era-source" href="https://www.britannica.com/place/Czechoslovakia" target="_blank" rel="noopener noreferrer">閱讀資料來源 ↗</a></div></div></div>
     </section>
 
     <section class="atlas-intro section-pad" id="atlas" aria-labelledby="atlas-title"><div class="section-number"><span>03 / LITERARY GEOGRAPHY</span><span>地圖敘事</span></div><div class="atlas-title-row"><h2 id="atlas-title">一座城市，<br><span class="serif-italic">多重聲音。</span></h2><div><p>沿著文學地景移動，觀察人、文字與歷史空間如何交會。</p><span>↓ 向下捲動，地圖會跟隨故事移動</span></div></div></section>
     <section class="map-story" aria-label="捷克文學走讀互動地圖">
-      <div class="sticky-map"><div id="map" aria-label="由 MapLibre 提供的互動故事地圖"></div><div class="map-vignette" aria-hidden="true"></div><div id="map-fallback" class="map-fallback" hidden>地圖暫時無法載入。你仍可閱讀所有章節內容及外部地點連結。</div><div class="map-label"><span class="map-label-dot"></span> THE LITERARY MAP <span id="map-active-index">01 / 05</span></div><div class="map-legend"><span>●</span> 捲動探索 / SCROLL STORY</div></div>
+      <div class="sticky-map"><div id="map" aria-label="由 MapLibre 顯示的捲動導覽地圖；地點會隨文章章節移動"></div><div class="map-vignette" aria-hidden="true"></div><div id="map-fallback" class="map-fallback" role="status" hidden><strong>地圖暫時無法載入</strong><span>故事內容與史料連結仍可正常閱讀。你可以繼續向下捲動。</span></div><div class="map-label"><span class="map-label-dot"></span> THE LITERARY MAP <span id="map-active-index">01 / 05</span></div><div class="map-legend"><span>●</span> 捲動探索 / SCROLL STORY</div></div>
       <div id="story"><div id="features" class="features"><!-- JS renders chapters, preserving upstream's config-driven story layout. --></div></div>
     </section>
     <section class="after-map"><div class="after-map-inner"><span>BEYOND THE MAP</span><h2>每一個地點，<br>都是理解一個時代的開始。</h2><a href="#fieldwork" class="text-link">了解我們如何展開實地學習 ↗</a></div></section>
