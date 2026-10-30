@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#141a1b" />
+  <meta name="description" content="走進捷克的文學、城市與民主記憶。青年百億 M-4-12 捷克文學與民主韌性數位策展原型。" />
+  <meta property="og:title" content="文字與自由｜Czech Literature & Freedom" />
+  <meta property="og:description" content="以時間、地圖與文學走讀捷克的民主記憶。" />
+  <title>文字與自由 — 捷克文學與民主韌性</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
+  <link href="./site.css" rel="stylesheet" />
+  <script defer src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+  <script defer src="https://unpkg.com/scrollama@3.2.0/build/scrollama.min.js"></script>
+  <script defer src="./config.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要內容</a>
+  <div class="scroll-line" aria-hidden="true"><div id="scroll-progress"></div></div>
+  <header class="site-nav" id="top">
+    <a href="#top" class="brand" aria-label="文字與自由，回首頁"><span class="brand-mark">✳</span><span>文字與自由 <small>WORDS & FREEDOM</small></span></a>
+    <nav class="desktop-menu" aria-label="主選單">
+      <a href="#manifesto">策展概念</a><a href="#timeline">歷史時間軸</a><a href="#atlas">文學地圖</a><a href="#fieldwork">學習計畫</a>
+    </nav>
+    <a class="nav-action" href="https://github.com/Bn0u0/czech-100b-plan" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+    <button class="mobile-trigger" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="開啟選單"><span></span><span></span></button>
+    <nav id="mobile-menu" class="mobile-menu" aria-label="手機選單" hidden><a href="#manifesto">策展概念</a><a href="#timeline">歷史時間軸</a><a href="#atlas">文學地圖</a><a href="#fieldwork">學習計畫</a></nav>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-photo" role="img" aria-label="夕陽下的布拉格城堡、伏爾塔瓦河與查理大橋"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-grain" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="eyebrow"><span class="eyebrow-rule"></span> CZECH CULTURAL ATLAS <span class="eyebrow-index">01 — 03</span></div>
+        <p class="hero-kicker">一座城市 · 一段歷史 · 一種不願沉默的聲音</p>
+        <h1 id="hero-title">在文字之間，<br><em>遇見自由。</em></h1>
+        <p class="hero-copy">從布拉格的石板街，到作家筆下的時代記憶。讓文學成為認識捷克歷史、民主與文化韌性的另一種入口。</p>
+        <div class="hero-buttons"><a class="pill-btn primary" href="#manifesto">開始探索 <span>↘</span></a><a class="pill-btn ghost" href="#atlas">展開文學地圖 <span>↗</span></a></div>
+      </div>
+      <div class="hero-bottom"><span>SCROLL TO EXPLORE <span class="down-arrow">↓</span></span><span>PRAGUE · CZECHIA — 50°05′ N</span><span class="hero-vertical">數位策展原型 · 2026</span></div>
+      <a class="image-credit" href="https://unsplash.com/photos/6En4WYsNYXM" target="_blank" rel="noopener noreferrer">Photo © Unsplash contributor / 6En4WYsNYXM</a>
+    </section>
+
+    <section class="manifesto section-pad" id="manifesto" aria-labelledby="manifesto-title">
+      <div class="section-number"><span>01 / CURATORIAL NOTE</span><span>策展概念</span></div>
+      <div class="manifesto-grid">
+        <div><span class="small-star" aria-hidden="true">✳</span><h2 id="manifesto-title">歷史不只寫在<br><i>教科書裡。</i></h2></div>
+        <div class="manifesto-text"><p class="lead">有些時代，文字是觀察社會的鏡子；有些時代，文字也是人們爭取表達空間的方式。</p><p>本網站以「文學、城市、民主韌性」為線索，透過互動年表、地圖與策展故事，建立面向繁體中文讀者的捷克文化入門路徑。這是一個申請前的研究與展示原型，尚非海外見習成果。</p><div class="tag-row"><span>文學作家</span><span>民主記憶</span><span>數位人文</span><span>互動策展</span></div></div>
+      </div>
+      <div class="stat-row"><div><strong>03</strong><small>探索主題</small></div><div><strong>05</strong><small>文學地圖章節</small></div><div><strong>18</strong><small>官方見習天數</small></div><div class="stat-note">青年百億海外圓夢基金計畫<br>M-4-12 捷克文學與民主韌性</div></div>
+    </section>
+
+    <section class="timeline-section section-pad" id="timeline" aria-labelledby="timeline-title">
+      <div class="section-number"><span>02 / THROUGH THE YEARS</span><span>互動時間軸</span></div>
+      <div class="section-heading-row"><h2 id="timeline-title">時間留下的<span class="serif-italic">回聲。</span></h2><p>選擇一個年份，閱讀它如何影響文學與社會。這些是研究入口，不是單一事件的完整歷史論述。</p></div>
+      <div class="timeline-card"><div class="timeline-overline">EXPLORE AN ERA <span>1918—1993</span></div><div class="timeline-years" role="group" aria-label="選擇歷史年份"><button type="button" class="year-button active" data-year="1918" aria-pressed="true">1918</button><button type="button" class="year-button" data-year="1968" aria-pressed="false">1968</button><button type="button" class="year-button" data-year="1989" aria-pressed="false">1989</button><button type="button" class="year-button" data-year="1993" aria-pressed="false">1993</button></div><div class="timeline-rule"><div id="timeline-indicator"></div></div><div class="timeline-detail" aria-live="polite"><div><div class="era-label" id="era-caption">THE BEGINNING</div><div class="era-year" id="era-year">1918<span>.</span></div></div><div class="era-right"><h3 id="era-title">捷克斯洛伐克成立</h3><p id="era-description">第一次世界大戰結束後，捷克斯洛伐克建國。理解這個起點，有助於閱讀後來關於民族、語言與國家認同的文學討論。</p><a id="era-source" href="https://www.britannica.com/place/Czechoslovakia" target="_blank" rel="noopener noreferrer">閱讀資料來源 ↗</a></div></div></div>
+    </section>
+
+    <section class="atlas-intro section-pad" id="atlas" aria-labelledby="atlas-title"><div class="section-number"><span>03 / LITERARY GEOGRAPHY</span><span>地圖敘事</span></div><div class="atlas-title-row"><h2 id="atlas-title">一座城市，<br><span class="serif-italic">多重聲音。</span></h2><div><p>沿著文學地景移動，觀察人、文字與歷史空間如何交會。</p><span>↓ 向下捲動，地圖會跟隨故事移動</span></div></div></section>
+    <section class="map-story" aria-label="捷克文學走讀互動地圖">
+      <div class="sticky-map"><div id="map" aria-label="由 MapLibre 提供的互動故事地圖"></div><div class="map-vignette" aria-hidden="true"></div><div id="map-fallback" class="map-fallback" hidden>地圖暫時無法載入。你仍可閱讀所有章節內容及外部地點連結。</div><div class="map-label"><span class="map-label-dot"></span> THE LITERARY MAP <span id="map-active-index">01 / 05</span></div><div class="map-legend"><span>●</span> 捲動探索 / SCROLL STORY</div></div>
+      <div id="story"><div id="features" class="features"><!-- JS renders chapters, preserving upstream's config-driven story layout. --></div></div>
+    </section>
+    <section class="after-map"><div class="after-map-inner"><span>BEYOND THE MAP</span><h2>每一個地點，<br>都是理解一個時代的開始。</h2><a href="#fieldwork" class="text-link">了解我們如何展開實地學習 ↗</a></div></section>
+
+    <section class="fieldwork section-pad" id="fieldwork" aria-labelledby="fieldwork-title"><div class="section-number"><span>04 / FIELDWORK ROADMAP</span><span>學習計畫</span></div><div class="fieldwork-layout"><div><h2 id="fieldwork-title">從閱讀，到<br><span class="serif-italic">親身走讀。</span></h2><p>以官方 M-4-12 小簡章作為研究方向，設計出國前、見習期間與返台後的數位策展流程。下列成果是本網站規劃，非主辦單位的指定交付。</p><a href="https://github.com/Bn0u0/czech-100b-plan/blob/main/docs/official-itinerary.md" target="_blank" rel="noopener noreferrer" class="text-link">閱讀 18 天官方行程摘要 ↗</a></div><div class="roadmap"><article><span class="phase">PHASE 01 <small>出國前</small></span><h3>研究與原型</h3><p>建立作家與歷史資料卡、可追溯的文獻來源、互動地圖與時間軸，讓問題意識先成形。</p></article><article><span class="phase">PHASE 02 <small>見習期間 · 2027.04</small></span><h3>田野調查與策展學習</h3><p>根據實際允許的走讀、講習及館舍交流，記錄觀察、採訪授權與文物背景；不預設已取得素材。</p></article><article><span class="phase">PHASE 03 <small>返台後</small></span><h3>繁體中文線上展覽</h3><p>整理學習心得、台捷比較及經授權的圖像與文獻，製作可公開使用的文化導覽頁面。</p></article></div></div></section>
+  </main>
+  <footer class="footer"><div class="footer-top"><div><div class="footer-symbol">✳</div><h2>讓故事，<i>繼續被閱讀。</i></h2></div><a class="pill-btn footer-pill" href="#top">回到頂端 ↑</a></div><div class="footer-bottom"><div>文字與自由 / WORDS & FREEDOM<br><small>獨立作品集原型，非教育部、東吳大學或合作機構官方網站。</small></div><div><a href="https://github.com/opengeos/maplibre-gl-storymaps" target="_blank" rel="noopener noreferrer">Open source credits ↗</a><a href="https://github.com/Bn0u0/czech-100b-plan" target="_blank" rel="noopener noreferrer">Source code ↗</a><a href="https://unsplash.com/photos/6En4WYsNYXM" target="_blank" rel="noopener noreferrer">Hero photography ↗</a></div><span>© 2026 CZECH 100B PLAN</span></div></footer>
+</body>
+</html>
