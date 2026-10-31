@@ -1,54 +1,32 @@
-# 捷克百億計劃 · 文字與自由
+# 在出發之前，先開始理解｜M-4-12 自主研究紀錄
 
-[**開啟網站 V1**](https://czech-100b-plan.vercel.app/) ｜ [官方計畫摘要](docs/official-itinerary.md)
+[開啟正式網站](https://czech-100b-plan.vercel.app/) · [互動文學地圖與歷史年表](https://czech-100b-plan.vercel.app/atlas.html) · [研究網站 V2.0 設計說明](docs/research-journal-v2.md)
 
-這是配合青年百億海外圓夢基金計畫 **M-4-12《捷克文學與民主韌性》** 所製作的獨立數位策展／作品集原型。主題包括捷克文學、布拉格城市歷史、民主記憶與中歐文化交流。
+這是針對青年百億海外圓夢基金計畫 **M-4-12「捷克文學與民主韌性」** 的獨立自主研究與行前準備網站。網站的目的，是呈現對計畫的理解、實際準備成果、未解問題及希望現地深化的研究方向，**不是官方網站，也不是已完成的海外見習成果**。
 
-> 此網站並非教育部、東吳大學、捷克文學館或摩拉維亞圖書館官方網站；內容是出國前研究與作品展示，**不是已經完成的見習或田野調查成果**。
+## 研究網站 V2.0
 
-## 目前已實作
+- 首頁：申請前的研究動機與官方計畫理解
+- 準備證據：已建立的互動地圖，以及仍待閱讀的研究題目，明確區分完成與待研究
+- 開放問題：初步假說、所缺證據、預定現地追問
+- 見習學習：行前、現地、返台三階段的研究對照
+- 返台成果：繁體中文數位策展的初步規劃
+- 原版地圖：保留於 `atlas.html`，仍使用 MapLibre + Scrollama
 
-- 電影式首頁：布拉格實景攝影、中文字體與捲動式視覺敘事
-- **互動歷史年表**：1918、1968、1989、1993，可切換文字與來源
-- **5 站文學／歷史地圖**：布拉格舊城、卡夫卡、溫策拉斯廣場、摩拉維亞圖書館、維也納
-- 依章節自動移動地圖鏡頭，支援手機排版和減少動畫偏好
-- 官方計畫行程、網站策展構想與實際成果的明確區分
+## 技術與開源來源
 
-## 技術與開源沿用
+網站仍使用靜態 HTML/CSS/JavaScript，以避免為了視覺效果增加不必要的維護成本。內容架構參考 [A Quiet Publication](https://astro.build/themes/details/a-quiet-publication/)；案例敘事參考 [Case](https://github.com/erlandv/case)；地圖延續 [MapLibre GL Storytelling](https://github.com/opengeos/maplibre-gl-storymaps) 的 MIT 授權架構，授權見 [LICENSE](LICENSE)。前兩者僅借鑑資訊架構與設計方法，未複製其原始碼。
 
-本版**保留並改寫** [opengeos/maplibre-gl-storymaps](https://github.com/opengeos/maplibre-gl-storymaps)（© 2026 Qiusheng Wu, MIT）的核心設計：
-`config.js` 定義章節與地圖位置 → `app.js` 動態建立 `.step` → [Scrollama](https://github.com/russellsamora/scrollama) 監看進入畫面的章節 → [MapLibre GL JS](https://maplibre.org/) `flyTo` 移動地圖。
+完整說明：[研究網站 V2.0](docs/research-journal-v2.md) · [官方行程整理](docs/official-itinerary.md) · [來源](docs/sources.md)。
 
-本版以輕量 **HTML / CSS / JavaScript 靜態網站**部署至 Vercel，沒有為了視覺效果另裝一套大型前端框架。歷史時間軸目前是獨立輕量元件，**尚未整合** `timel.in` 或 `ScrollCraft`；它們仍在後續研究選項中。
+## 內容誠實性
 
-來源檔案：`index.html`、`site.css`、`config.js`、`app.js`、`LICENSE`。
+官方行程依 2027 年 4 月 1 日至 4 月 18 日小簡章整理，詳細活動以主辦方最新公告為準。任何研究假說都不是已證實結論；尚未閱讀的文本不得標為已完成。未取得的訪談、館藏與現地觀察不得宣稱已完成。
 
-## 本地啟動
+## 本地預覽
 
 ```bash
 python3 -m http.server 8000
-# 開啟 http://localhost:8000
 ```
 
-地圖、Google Fonts 和圖片依賴外部網路；若地圖服務不可用，文字章節仍可閱讀。
-
-## 官方計畫
-
-- 編號：M-4-12｜提案單位：東吳大學
-- 時間：2027/4/1–4/18，含飛行日共 18 天
-- 地點：捷克布拉格、奧地利維也納
-- 名額：20 人；詳細資格與行程以當期官方小簡章為準
-
-[逐日行程](docs/official-itinerary.md) · [申請準備](docs/application-checklist.md) · [網站規劃](docs/website-plan.md) · [資料來源](docs/sources.md)
-
-## 影像／地圖／文字來源
-
-- 首頁布拉格照片：[Unsplash / 6En4WYsNYXM](https://unsplash.com/photos/6En4WYsNYXM)，透過 Unsplash Images CDN 顯示。
-- 底圖：CARTO Dark Matter（遵守其地圖資料標示與服務條款）。
-- 歷史概要：依各年份提供的 Britannica 項目連結；正式發表前仍應持續核對研究文獻。
-- 計畫日期與方向：使用者提供之 M-4-12 官方 9 頁小簡章。
-- 核心地圖程式：[MapLibre GL Storytelling](https://github.com/opengeos/maplibre-gl-storymaps)，保留原著作權 MIT 條款於 [LICENSE](LICENSE)。
-
-## 隱私及權利
-
-公開儲存庫請勿提交個人證件、護照、電話、私人申請草稿、未授權手稿或訪談素材。網站所示圖文不表示文化機構認可或背書。
+請在瀏覽器開啟 http://localhost:8000 。網站不需打包，但 Google Fonts、地圖與底圖依賴網路服務。
