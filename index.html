@@ -1,76 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#141a1b" />
-  <meta name="color-scheme" content="dark light" />
-  <meta name="description" content="走進捷克的文學、城市與民主記憶。青年百億 M-4-12 捷克文學與民主韌性數位策展原型。" />
-  <meta property="og:title" content="文字與自由｜Czech Literature & Freedom" />
-  <meta property="og:description" content="以時間、地圖與文學走讀捷克的民主記憶。" />
-  <title>文字與自由 — 捷克文學與民主韌性</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+TC:wght@300;400;500;600;700&family=Noto+Serif+TC:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet" />
-  <link href="./site.css" rel="stylesheet" />
-  <script defer src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
-  <script defer src="https://unpkg.com/scrollama@3.2.0/build/scrollama.min.js"></script>
-  <script defer src="./config.js"></script>
-  <script defer src="./app.js"></script>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#171b19">
+<meta name="description" content="M-4-12 捷克文學與民主韌性：一份公開的自主研究、計畫理解與海外見習準備紀錄。">
+<meta property="og:title" content="在出發之前，先開始理解｜M-4-12 自主研究紀錄">
+<meta property="og:description" content="已查證的計畫資訊、正在形成的問題，以及希望透過現地見習尋找的答案。">
+<title>在出發之前，先開始理解｜捷克文學與民主韌性</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./journal.css"><script defer src="./journal.js"></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">跳到主要內容</a>
-  <div class="scroll-line" aria-hidden="true"><div id="scroll-progress"></div></div>
-  <header class="site-nav" id="top">
-    <a href="#top" class="brand" aria-label="文字與自由，回首頁"><span class="brand-mark" aria-hidden="true"></span><span>文字與自由 <small>WORDS & FREEDOM</small></span></a>
-    <nav class="desktop-menu" aria-label="主選單">
-      <a href="#manifesto">策展概念</a><a href="#timeline">歷史時間軸</a><a href="#atlas">文學地圖</a><a href="#fieldwork">學習計畫</a>
-    </nav>
-    <a class="nav-action" href="https://github.com/Bn0u0/czech-100b-plan" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <button class="mobile-trigger" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="開啟導覽選單"><span></span><span></span></button>
-    <nav id="mobile-menu" class="mobile-menu" aria-label="手機選單" hidden><a href="#manifesto">策展概念</a><a href="#timeline">歷史時間軸</a><a href="#atlas">文學地圖</a><a href="#fieldwork">學習計畫</a></nav>
-  </header>
-  <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-photo" role="img" aria-label="夕陽下的布拉格城堡、伏爾塔瓦河與查理大橋"></div>
-      <div class="hero-shade"></div>
-      <div class="hero-grain" aria-hidden="true"></div>
-      <div class="hero-inner">
-        
-        <p class="hero-kicker">一座城市 · 一段歷史 · 一種不願沉默的聲音</p>
-        <h1 id="hero-title">在文字之間，<br><em>遇見自由。</em></h1>
-        <p class="hero-copy">從布拉格的石板街，到作家筆下的時代記憶。讓文學成為認識捷克歷史、民主與文化韌性的另一種入口。</p>
-        <div class="hero-buttons"><a class="pill-btn primary" href="#manifesto">開始探索</a><a class="pill-btn ghost" href="#atlas">展開文學地圖</a></div>
-      </div>
-      <div class="hero-bottom"><span>SCROLL TO EXPLORE </span><span>PRAGUE · CZECHIA — 50°05′ N</span><span class="hero-vertical">數位策展原型 · 2026</span></div>
-      <a class="image-credit" href="https://unsplash.com/photos/6En4WYsNYXM" target="_blank" rel="noopener noreferrer">Photography: Unsplash / 6En4WYsNYXM</a>
-    </section>
-
-    <section class="manifesto section-pad" id="manifesto" aria-labelledby="manifesto-title">
-      <div class="section-number"><span>01 / CURATORIAL NOTE</span><span>策展概念</span></div>
-      <div class="manifesto-grid">
-        <div><h2 id="manifesto-title">歷史不只寫在<br><i>教科書裡。</i></h2></div>
-        <div class="manifesto-text"><p class="lead">有些時代，文字是觀察社會的鏡子；有些時代，文字也是人們爭取表達空間的方式。</p><p>本網站以「文學、城市、民主韌性」為線索，透過互動年表、地圖與策展故事，建立面向繁體中文讀者的捷克文化入門路徑。這是一個申請前的研究與展示原型，尚非海外見習成果。</p><div class="tag-row"><span>文學作家</span><span>民主記憶</span><span>數位人文</span><span>互動策展</span></div></div>
-      </div>
-      <div class="stat-row"><div><strong>03</strong><small>探索主題</small></div><div><strong>05</strong><small>文學地圖章節</small></div><div><strong>18</strong><small>官方見習天數</small></div><div class="stat-note">青年百億海外圓夢基金計畫<br>M-4-12 捷克文學與民主韌性</div></div>
-    </section>
-
-    <section class="timeline-section section-pad" id="timeline" aria-labelledby="timeline-title">
-      <div class="section-number"><span>02 / THROUGH THE YEARS</span><span>互動時間軸</span></div>
-      <div class="section-heading-row"><h2 id="timeline-title">時間留下的<span class="serif-italic">回聲。</span></h2><p>選擇一個年份，閱讀它如何影響文學與社會。這些是研究入口，不是單一事件的完整歷史論述。</p></div>
-      <div class="timeline-card"><div class="timeline-overline">EXPLORE AN ERA <span>1918—1993</span></div><div class="timeline-years" role="group" aria-label="選擇歷史年份；可用左右方向鍵切換"><button type="button" class="year-button active" data-year="1918" aria-pressed="true">1918</button><button type="button" class="year-button" data-year="1968" aria-pressed="false">1968</button><button type="button" class="year-button" data-year="1989" aria-pressed="false">1989</button><button type="button" class="year-button" data-year="1993" aria-pressed="false">1993</button></div><div class="timeline-rule"><div id="timeline-indicator"></div></div><div class="timeline-detail" aria-live="polite"><div><div class="era-label" id="era-caption">THE BEGINNING</div><div class="era-year" id="era-year">1918<span>.</span></div></div><div class="era-right"><h3 id="era-title">捷克斯洛伐克成立</h3><p id="era-description">第一次世界大戰結束後，捷克斯洛伐克建國。理解這個起點，有助於閱讀後來關於民族、語言與國家認同的文學討論。</p><a id="era-source" href="https://www.britannica.com/place/Czechoslovakia" target="_blank" rel="noopener noreferrer">閱讀資料來源</a></div></div></div>
-    </section>
-
-    <section class="atlas-intro section-pad" id="atlas" aria-labelledby="atlas-title"><div class="section-number"><span>03 / LITERARY GEOGRAPHY</span><span>地圖敘事</span></div><div class="atlas-title-row"><h2 id="atlas-title">一座城市，<br><span class="serif-italic">多重聲音。</span></h2><div><p>沿著文學地景移動，觀察人、文字與歷史空間如何交會。</p><span>向下捲動，地圖會跟隨故事移動</span></div></div></section>
-    <section class="map-story" aria-label="捷克文學走讀互動地圖">
-      <div class="sticky-map"><div id="map" aria-label="由 MapLibre 顯示的捲動導覽地圖；地點會隨文章章節移動"></div><div class="map-vignette" aria-hidden="true"></div><div id="map-fallback" class="map-fallback" role="status" hidden><strong>地圖暫時無法載入</strong><span>故事內容與史料連結仍可正常閱讀。你可以繼續向下捲動。</span></div><div class="map-label"><span class="map-label-dot"></span> THE LITERARY MAP <span id="map-active-index">01 / 05</span></div><div class="map-legend"><span class="legend-dot" aria-hidden="true"></span>捲動探索 / SCROLL STORY</div></div>
-      <div id="story"><div id="features" class="features"><!-- JS renders chapters, preserving upstream's config-driven story layout. --></div></div>
-    </section>
-    <section class="after-map"><div class="after-map-inner"><span>BEYOND THE MAP</span><h2>每一個地點，<br>都是理解一個時代的開始。</h2><a href="#fieldwork" class="text-link">了解我們如何展開實地學習</a></div></section>
-
-    <section class="fieldwork section-pad" id="fieldwork" aria-labelledby="fieldwork-title"><div class="section-number"><span>04 / FIELDWORK ROADMAP</span><span>學習計畫</span></div><div class="fieldwork-layout"><div><h2 id="fieldwork-title">從閱讀，到<br><span class="serif-italic">親身走讀。</span></h2><p>以官方 M-4-12 小簡章作為研究方向，設計出國前、見習期間與返台後的數位策展流程。下列成果是本網站規劃，非主辦單位的指定交付。</p><a href="https://github.com/Bn0u0/czech-100b-plan/blob/main/docs/official-itinerary.md" target="_blank" rel="noopener noreferrer" class="text-link">閱讀 18 天官方行程摘要</a></div><div class="roadmap"><article><span class="phase">PHASE 01 <small>出國前</small></span><h3>研究與原型</h3><p>建立作家與歷史資料卡、可追溯的文獻來源、互動地圖與時間軸，讓問題意識先成形。</p></article><article><span class="phase">PHASE 02 <small>見習期間 · 2027.04</small></span><h3>田野調查與策展學習</h3><p>根據實際允許的走讀、講習及館舍交流，記錄觀察、採訪授權與文物背景；不預設已取得素材。</p></article><article><span class="phase">PHASE 03 <small>返台後</small></span><h3>繁體中文線上展覽</h3><p>整理學習心得、台捷比較及經授權的圖像與文獻，製作可公開使用的文化導覽頁面。</p></article></div></div></section>
-  </main>
-  <footer class="footer"><div class="footer-top"><div><h2>讓故事，<i>繼續被閱讀。</i></h2></div><a class="pill-btn footer-pill" href="#top">回到頂端</a></div><div class="footer-bottom"><div>文字與自由 / WORDS & FREEDOM<br><small>獨立作品集原型，非教育部、東吳大學或合作機構官方網站。</small></div><div><a href="https://github.com/opengeos/maplibre-gl-storymaps" target="_blank" rel="noopener noreferrer">Open source credits</a><a href="https://github.com/Bn0u0/czech-100b-plan" target="_blank" rel="noopener noreferrer">Source code</a><a href="https://unsplash.com/photos/6En4WYsNYXM" target="_blank" rel="noopener noreferrer">Hero photography</a></div><span>Copyright 2026 CZECH 100B PLAN</span></div></footer>
-</body>
-</html>
+<a class="skip" href="#main">跳至主要內容</a>
+<header class="header" id="top"><a class="identity" href="#top" aria-label="回到首頁"><span class="identity-line" aria-hidden="true"></span><span>出發之前<small>RESEARCH BEFORE DEPARTURE</small></span></a><nav class="desktop" aria-label="主要導覽"><a href="#understanding">計畫理解</a><a href="#evidence">自主研究</a><a href="#questions">研究提問</a><a href="#field">現地學習</a><a href="#outcome">返台構想</a></nav><a class="source-link" href="https://github.com/Bn0u0/czech-100b-plan" target="_blank" rel="noopener noreferrer">研究原始紀錄</a><button id="nav-toggle" class="nav-toggle" aria-label="開啟導覽" aria-expanded="false" aria-controls="mobile-nav">選單</button></header>
+<nav id="mobile-nav" class="mobile-nav" aria-label="手機導覽" hidden><a href="#understanding">計畫理解</a><a href="#evidence">自主研究</a><a href="#questions">研究提問</a><a href="#field">現地學習</a><a href="#outcome">返台構想</a><a href="#sources">資料來源</a></nav>
+<main id="main">
+<section class="hero"><div class="hero-grid"><div class="hero-main"><p class="eyebrow">M-4-12 · 捷克文學與民主韌性</p><h1>在出發之前，<br><em>先開始理解。</em></h1><p class="hero-lead">一份關於捷克文學、民主記憶與文化策展的自主研究紀錄。這裡不是完成後的成果展，而是我在申請之前，已經開始提出問題、整理資料與準備學習的過程。</p><div class="hero-actions"><a class="button solid" href="#evidence">查看目前的準備成果</a><a class="button outline" href="#questions">閱讀尚未解答的問題</a></div><p class="hero-footnote">獨立研究與申請準備網站，非主辦單位官方頁面。研究內容將隨實際閱讀與查證更新。</p></div><aside class="hero-aside"><p class="aside-title">RESEARCH DOSSIER <span>2026 / 2027</span></p><div class="aside-rule"></div><div class="dossier-item"><span>計畫</span><strong>青年百億海外圓夢基金計畫</strong></div><div class="dossier-item"><span>主題</span><strong>文學、民主韌性、文化交流</strong></div><div class="dossier-item"><span>預定期間</span><strong>2027.04.01 — 04.18</strong></div><div class="dossier-item"><span>進度</span><strong>行前準備／持續研究中</strong></div><div class="aside-bottom">DOCUMENT 01 / OPEN RESEARCH</div></aside></div><div class="hero-bottom"><span>從官方行程出發，形成自己的研究問題</span><span>SCROLL TO READ</span></div></section>
+<section class="section light" id="understanding"><div class="section-heading"><span class="overline">01 / THE PROGRAM</span><h2>我理解的，<br>不只是一趟海外行程。</h2><p>這項計畫把文學館見習、歷史走讀、青年交流與返台策展連在一起。我想理解的不只是各個景點，而是這些安排如何幫助參與者把文學放回真實的社會脈絡。</p></div><div class="four"><article><span class="ordinal">A</span><h3>文學與歷史</h3><p>透過捷克作家、作品與政治歷史，理解不同年代的文字如何記錄社會經驗。</p><small>行前研究方向</small></article><article><span class="ordinal">B</span><h3>館藏與策展</h3><p>理解文學館如何保存、選擇與呈現文獻；不把展示理解成單純陳列物件。</p><small>見習學習方向</small></article><article><span class="ordinal">C</span><h3>跨文化對話</h3><p>將台灣的閱讀經驗帶入交流，同時避免用單一歷史類比取代脈絡理解。</p><small>交流學習方向</small></article><article><span class="ordinal">D</span><h3>返台轉譯</h3><p>把所學轉成台灣讀者能閱讀、追溯來源且願意繼續探索的數位內容。</p><small>成果規劃方向</small></article></div><div class="document-note"><span>文件依據</span><p>以上是我對 M-4-12 官方小簡章學習方向的整理與詮釋，並非主辦單位的正式課程成效宣告。詳細日期與活動以最新官方公告為準。</p><a href="./docs/official-itinerary.md">閱讀行程整理</a></div></section>
+<section class="section dark" id="evidence"><div class="section-heading split"><div><span class="overline">02 / WORK IN PROGRESS</span><h2>真正的準備，<br>應該留下證據。</h2></div><p>我把「已完成」「整理中」與「未開始」分開標示。網站本身是第一份可檢視的準備成果，但它不等於我已完成所有文學閱讀或田野研究。</p></div><div class="case-grid"><article class="case featured"><div class="case-top"><span>CASE STUDY 001</span><span class="status done">已建立</span></div><div class="case-content"><p class="case-category">數位研究工具</p><h3>從行程表，建立可探索的文學地圖。</h3><p>將小簡章提及的城市與文化場域轉成互動地圖、歷史年表與章節敘事，作為後續閱讀與現地提問的起點。地圖標示的是預定研究地點，不是已完成的實地訪查。</p><a class="inline-link" href="./atlas.html">開啟互動地圖與歷史年表</a></div><div class="case-meta"><span>方法：MapLibre / Scrollama</span><span>證據：公開原始碼</span></div></article><article class="case"><div class="case-top"><span>RESEARCH NOTE 002</span><span class="status pending">待深入閱讀</span></div><div class="case-content"><p class="case-category">文本與思想</p><h3>哈維爾與《無權力者的權力》</h3><p>官方行程包含相關講習。接下來將以文本閱讀、歷史背景與研究者觀點，檢查思想作品與民主化之間能被證實的關係。</p><a class="inline-link" href="#question-1">查看研究問題</a></div><div class="case-meta"><span>目前：確立題目</span><span>尚未宣稱完成閱讀</span></div></article><article class="case"><div class="case-top"><span>RESEARCH NOTE 003</span><span class="status pending">待深入閱讀</span></div><div class="case-content"><p class="case-category">文學與城市</p><h3>卡夫卡與多語言布拉格</h3><p>以城市、語言與身分認同為切入點，建立可在博物館與街區走讀中進一步檢驗的問題。</p><a class="inline-link" href="#question-2">查看研究問題</a></div><div class="case-meta"><span>目前：形成研究框架</span><span>現地資料待取得</span></div></article></div><p class="section-after">研究紀錄將保留版本與來源，不會用自動生成的大量文章取代實際閱讀。</p></section>
+<section class="section parchment" id="questions"><div class="section-heading"><span class="overline">03 / OPEN QUESTIONS</span><h2>我還不知道的，<br>正是我想研究的。</h2><p>「未知」不是空白的裝飾。每個問題都應有初步想法、缺少的證據，以及下一步可採取的研究方法。</p></div><div class="question-list"><details id="question-1" open><summary><span>Q / 01</span><strong>文學與思想作品，如何參與民主轉型？</strong><span class="detail-state">研究中</span></summary><div class="question-body"><div><small>初步假說，尚未證實</small><p>文字可能透過思想傳播、公共討論與文化網絡，影響人們理解權力與公共生活的方式；但不能直接把相關性當成因果關係。</p></div><div><small>需要的證據</small><p>哈維爾文本、作品流通的歷史資料，以及研究者對其政治與文化影響的不同解釋。</p></div><div><small>希望現地追問</small><p>捷克文學館如何策展這段歷史？哪些展件能呈現文學與民主轉型的複雜關係？</p></div></div></details><details id="question-2"><summary><span>Q / 02</span><strong>一座多語言城市，如何影響作家的創作？</strong><span class="detail-state">待查證</span></summary><div class="question-body"><div><small>初步假說，尚未證實</small><p>語言環境、文化身分與城市空間可能共同形塑文學經驗；需要避免將作家簡化為單一國族敘事。</p></div><div><small>需要的證據</small><p>卡夫卡相關傳記、原始文本、布拉格語言史與不同研究觀點。</p></div><div><small>希望現地追問</small><p>博物館與城市導覽如何向不同語言背景的讀者呈現卡夫卡？</p></div></div></details><details id="question-3"><summary><span>Q / 03</span><strong>文學館如何把保存的資料轉化為公共記憶？</strong><span class="detail-state">待查證</span></summary><div class="question-body"><div><small>初步假說，尚未證實</small><p>展件選擇、說明文字、空間動線與互動形式，可能改變觀眾理解文學的方式。</p></div><div><small>需要的證據</small><p>捷克文學館與其他文學機構的公開策展案例、展覽目錄及典藏政策。</p></div><div><small>希望現地追問</small><p>策展團隊如何在學術準確、公共理解與有限展場資源之間取捨？</p></div></div></details></div></section>
+<section class="section dark field-section" id="field"><div class="section-heading split"><div><span class="overline">04 / FIELDWORK INTENT</span><h2>哪些答案，<br>需要親自前往尋找？</h2></div><p>網路能提供大量史料，但不能完全取代與策展工作者交流、現場觀看展件及觀察城市空間。以下是預定的學習方法，不是已發生的行程紀錄。</p></div><div class="field-table"><div class="field-head"><span>行前可做</span><span>見習希望深化</span><span>返台預計產出</span></div><div class="field-row"><div><b>文學與歷史文獻</b><p>閱讀哈維爾、卡夫卡及相關研究</p></div><div><b>文學館講習與交流</b><p>檢查文本如何被解釋與策展</p></div><div><b>研究文章</b><p>整理有來源的多重觀點</p></div></div><div class="field-row"><div><b>城市與歷史地圖</b><p>整理事件、地點與研究問題</p></div><div><b>布拉格等地走讀</b><p>觀察地景與公共記憶的呈現</p></div><div><b>互動地圖</b><p>更新實際觀察與來源</p></div></div><div class="field-row"><div><b>策展案例研究</b><p>比較文學館公開展覽資料</p></div><div><b>策展工作坊</b><p>學習展件選擇與展牆文字</p></div><div><b>數位展件原型</b><p>面向繁體中文讀者的展示</p></div></div></div></section>
+<section class="section light" id="outcome"><div class="outcome-layout"><div><span class="overline">05 / BEYOND THE TRIP</span><h2>讓學習的成果，<br>能夠被別人閱讀。</h2><p>如果有機會參與見習，我希望在返台後，把原先的問題、實際觀察與研究修正整理為繁體中文數位展件。內容將區分已取得授權的素材、公開文獻與個人分析，讓讀者能回到來源自行判斷。</p><p>網站將保留申請前的準備版本，使研究如何改變有跡可循；這是一項預定計畫，並非已完成的海外成果。</p></div><div class="outcome-steps"><div><span>BEFORE</span><strong>提出問題</strong><p>文獻、行程理解、研究假說</p></div><div><span>DURING / IF SELECTED</span><strong>現地驗證</strong><p>講座、走讀、工作坊、交流</p></div><div><span>AFTER</span><strong>公開轉譯</strong><p>研究文章、互動地圖、數位策展</p></div></div></div></section>
+<section class="section sources-section" id="sources"><div class="section-heading"><span class="overline">06 / SOURCES & TRANSPARENCY</span><h2>每個判斷，都應有出處。</h2><p>這是一個仍在發展中的自主研究網站。官方事實、公開史料、個人推測與未來計畫會保持區分。</p></div><div class="source-grid"><a href="https://twpathfinder.yda.gov.tw/" target="_blank" rel="noopener noreferrer"><span>官方資訊</span><strong>青年百億海外圓夢基金計畫</strong><small>以最新公告為準</small></a><a href="https://www.muzeumliteratury.cz/en/" target="_blank" rel="noopener noreferrer"><span>見習機構</span><strong>捷克文學館</strong><small>機構公開資料</small></a><a href="https://www.mzk.cz/en" target="_blank" rel="noopener noreferrer"><span>研究機構</span><strong>摩拉維亞圖書館</strong><small>機構公開資料</small></a><a href="./atlas.html"><span>研究工具</span><strong>文學地圖與歷史年表</strong><small>保留原有互動原型</small></a></div></section>
+</main><footer><div><strong>出發之前</strong><p>一份持續更新的學習準備紀錄。</p></div><div><a href="#top">回到頂端</a><a href="https://github.com/Bn0u0/czech-100b-plan">GitHub</a><a href="./atlas.html">互動研究附錄</a></div><small>獨立自主研究 · 非官方網站 · 2026</small></footer>
+</body></html>
